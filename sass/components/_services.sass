@@ -1,0 +1,42 @@
+.services
+    width: calc(100% / 4)
+    text-align: center
+
+    +hide_menu
+        width: calc(100% / 2)
+    
+    +mobile
+        width: calc(100% / 2)
+ 
+    &_wrapper
+        text-align: center;
+
+    &_img
+        background-image: url('/Users/marcuskarlsson/Code/code-personal/stele/img/service_img.png')
+        background-repeat: no-repeat
+        background-size: cover
+        max-width: 30rem
+        height: 30rem
+        position: relative
+        box-shadow: -13px 13px 0px 0px $orange
+        margin: 0 auto 4rem auto
+        transition: box-shadow .15s ease-in-out
+        position: relative
+        
+        &:hover + .services_text--heading
+            transform: translateY(-3px)
+
+
+.services_text--heading
+    font-size: 2rem
+    margin-bottom: 5rem
+    transition: .3s ease all
+    color: $dark-grey
+            
+
+.services_heading
+    font-size: 2.5rem
+    color: $dark-grey
+    text-align: center
+    text-transform: uppercase
+    margin: 7rem auto 5rem auto

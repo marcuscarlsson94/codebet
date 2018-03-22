@@ -1,0 +1,207 @@
+.header
+    width: 100%
+    padding: 2.5rem 5rem
+    position: relative
+    background-color: transparent
+    z-index: 100
+
+    &_logo
+       background-image: url('/Users/marcuskarlsson/Code/code-personal/codebet/img/codebet_org_cmyk.svg')
+       background-repeat: no-repeat
+       background-size: contain
+       width: 23rem
+       height: 4.5rem
+       z-index: 1
+        
+    &_menu
+
+        +hide_menu
+            display: none
+
+        +tablet
+            display: none
+        
+        +mobile
+            display: none
+
+        &_list
+            display: inline-flex
+            font-size: 1.7rem
+
+        &_list--item
+            position: relative
+            list-style: none
+            text-decoration: none
+            color: $dark-grey
+            transition: .3s ease all
+
+            &:hover
+                color: rgba(0,0,0,.5)
+
+            &::after
+              content: ""
+              position: absolute
+              bottom: -4.2rem
+              left: 0
+              width: 100%
+              height: 3px
+              background-color: $orange
+              transform-origin: center
+              transition: ease all .2s
+              transform: scale(0)
+
+            &.active  
+                &::after
+                    content: ""
+                    position: absolute
+                    bottom: -4.2rem
+                    left: 0
+                    width: 100%
+                    height: 3px
+                    background-color: $orange
+                    transform-origin: center
+                    transition: ease all .2s
+                    transform: scale(1)
+              
+            &:hover:after
+                transform: scale(1)
+
+        &_list--item:not(:last-of-type)
+            margin-right: 5rem
+
+
+.hamburger 
+    display: inline-flex
+    align-items: center
+    cursor: pointer
+    z-index: 999
+    
+    p 
+        margin-right: 10px
+        color: $dark-grey
+
+.hamburger:hover .bar2
+    transform: translateX(5px)
+    transition: ease all .2s
+
+    
+.bar1,
+.bar2,
+.bar3 
+    width: 30px
+    height: 2px
+    background-color: white
+    margin: 6px 0
+    transition: 0.4s
+
+    +tablet
+        background-color: $font_color--primary
+    
+    +mobile
+        background-color: $font_color--primary
+    
+
+.bar1,
+.bar3,
+.change 
+    transition-timing-function: cubic-bezier(.17,1.14,.62,.71)
+    transition-duration: .1s
+  
+
+
+.change .bar1 
+    -webkit-transform: translate(1px, -5px) rotate(45deg)
+    transform: translate(1px, -5px) rotate(45deg)
+    transform-origin: left
+
+
+.change .bar2 
+    opacity: 0
+    transform: translateX(15px)
+
+
+.change .bar3 
+    -webkit-transform: rotate(-45deg) translate(0px, 1px)
+    transform: rotate(-45deg) translate(0px, 1px)
+    transform-origin: left
+
+
+.hide-on-mobile 
+
+    +hide_menu
+        display: none
+  
+.swap
+    transition: ease all .3s
+
+.mobile_menu
+    position: absolute
+    display: flex
+    flex-direction: column
+    top: 0
+    right: 0
+    width: 50%
+    height: 100%
+    padding: 2rem
+    background-color: $red
+    border-top: 1px solid black
+    z-index: 998
+    text-align: center
+    transform: translateX(550rem)
+    transition: cubic-bezier(0,.45,0,.93) .4s
+
+    +tablet 
+        width: 80%
+
+    &--item
+        list-style: none
+        display: block
+        padding: 3rem 2rem
+        color: white
+        cursor: pointer
+        transition: .3s ease all
+
+        &:hover
+            color: rgba(255,255,255,.7)
+
+.mobile_menu--active
+    right: 0
+    transform: translateX(0)
+
+.bg--animation
+    position: absolute
+    top: 0
+    right: 0
+    width: 52%
+    height: 100vh
+    padding: 2rem
+    background-color: rgba($red, .7) 
+    border-top: 1px solid black
+    z-index: 5
+    text-align: center
+    transform: translateX(550rem)
+    transition: cubic-bezier(0,.69,.23,1.01) .55s
+
+    &-in
+        transform: translateX(0)
+        right: 0
+
+.bg--animation-1
+    position: absolute
+    top: 0
+    right: 0
+    width: 54%
+    height: 100vh
+    padding: 2rem
+    background-color: rgba($red, .5) 
+    border-top: 1px solid black
+    z-index: 5
+    text-align: center
+    transform: translateX(550rem)
+    transition: cubic-bezier(0,.69,0,1.02) .65s
+
+    &-in
+        transform: translateX(0)
+        right: 0
+
+

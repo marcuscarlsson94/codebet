@@ -1,0 +1,29 @@
+{
+  "name": "codebet",
+  "version": "1.0.0",
+  "description": "Website for digital agency - Codebet",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.sass css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcuscarlsson94/codebet.git"
+  },
+  "keywords": [
+    "Website",
+    "code",
+    "betting",
+    "digital",
+    "marketing"
+  ],
+  "author": "Marcus Carlsson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marcuscarlsson94/codebet/issues"
+  },
+  "homepage": "https://github.com/marcuscarlsson94/codebet#readme",
+  "devDependencies": {
+    "node-sass": "^4.7.2"
+  }
+}
