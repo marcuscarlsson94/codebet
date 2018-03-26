@@ -1,11 +1,12 @@
 .hero
-    height: 100vh
+    height: 100%
     position: relative
+    overflow: hidden
 
     &::after
         content: ""
         position: absolute
-        right: 0
+        right: -10rem
         top: 0
         background-image: url('/Users/marcuskarlsson/Code/code-personal/codebet/img/union.png')
         background-size: contain
@@ -15,20 +16,26 @@
         height: 100%
         z-index: 1
 
+        +desktop-small
+            right: -26rem
+        
+        +desktop-medium
+            right: -16rem
+
         +tablet
             top: -3rem
             right: -25rem
         
         +mobile 
-            top: -3rem
-            right: -25rem
+            top: 0rem
+            right: -20rem
 
     &_content
         display: flex
         justify-content: space-around
         flex-direction: column
         height: 100%
-        width: 60%
+        width: 80%
         padding: 5rem
         
         +tablet
@@ -110,9 +117,18 @@
 .case_item_wrapper
     width: 100%
     margin-top: 5rem
+    display: flex
+    flex-wrap: no-wrap
+
+    +breakpoint_md
+       flex-wrap: wrap
+
+    +tablet 
+        display: block
     
 .case_item
     width: 100%
+    min-width: 40rem
     height: 55rem
     margin-right: $gutter-lr
     position: relative
@@ -156,5 +172,8 @@
     // visibility: hidden
     transform: translateY(-1rem)
     color: white
+
+    +tablet
+
 
             

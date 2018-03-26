@@ -514,12 +514,13 @@ body {
   height: 100vh; }
 
 .hero {
-  height: 100vh;
-  position: relative; }
+  height: 100%;
+  position: relative;
+  overflow: hidden; }
   .hero::after {
     content: "";
     position: absolute;
-    right: 0;
+    right: -10rem;
     top: 0;
     background-image: url("/Users/marcuskarlsson/Code/code-personal/codebet/img/union.png");
     background-size: contain;
@@ -528,20 +529,26 @@ body {
     width: 100%;
     height: 100%;
     z-index: 1; }
+    @media only screen and (min-width: 768px) {
+      .hero::after {
+        right: -26rem; } }
+    @media only screen and (min-width: 1440px) {
+      .hero::after {
+        right: -16rem; } }
     @media only screen and (max-width: 768px) {
       .hero::after {
         top: -3rem;
         right: -25rem; } }
     @media only screen and (max-width: 420px) {
       .hero::after {
-        top: -3rem;
-        right: -25rem; } }
+        top: 0rem;
+        right: -20rem; } }
   .hero_content {
     display: flex;
     justify-content: space-around;
     flex-direction: column;
     height: 100%;
-    width: 60%;
+    width: 80%;
     padding: 5rem; }
     @media only screen and (max-width: 768px) {
       .hero_content {
@@ -627,10 +634,19 @@ body {
 
 .case_item_wrapper {
   width: 100%;
-  margin-top: 5rem; }
+  margin-top: 5rem;
+  display: flex;
+  flex-wrap: no-wrap; }
+  @media only screen and (max-width: 1140px) {
+    .case_item_wrapper {
+      flex-wrap: wrap; } }
+  @media only screen and (max-width: 768px) {
+    .case_item_wrapper {
+      display: block; } }
 
 .case_item {
   width: 100%;
+  min-width: 40rem;
   height: 55rem;
   margin-right: 3rem;
   position: relative;
