@@ -294,7 +294,7 @@ body {
     position: relative; }
   #video_container {
     text-align: center;
-    margin-top: -6rem; }
+    margin-top: 3rem; }
   #video_heading {
     position: absolute;
     top: 50%;
@@ -808,7 +808,7 @@ body {
 
 .info_section {
   text-align: left;
-  padding: 7rem 0 0 0; }
+  padding: 7rem 0; }
   @media only screen and (max-width: 420px) {
     .info_section {
       padding: 0 0 0 0; } }
@@ -821,7 +821,6 @@ body {
         margin-top: 0rem; } }
   .info_section--heading {
     color: rgba(0, 0, 0, 0.75);
-    margin-top: 5rem;
     margin-bottom: 2.5rem;
     font-size: 4rem; }
     @media only screen and (max-width: 420px) {
@@ -835,7 +834,7 @@ body {
       .info_section--paragraph {
         line-height: 150%; } }
   .info_section img {
-    margin: 5rem 4rem 12rem 0rem;
+    margin: 5rem 4rem 0rem 0rem;
     transition: .3s ease all; }
     @media only screen and (max-width: 420px) {
       .info_section img {
