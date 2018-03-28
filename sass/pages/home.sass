@@ -1,5 +1,5 @@
 .hero
-    height: 100%
+    height: 100vh
     position: relative
     overflow: hidden
 
@@ -8,7 +8,7 @@
         position: absolute
         right: -10rem
         top: 0
-        background-image: url('/Users/marcuskarlsson/Code/code-personal/codebet/img/union.png')
+        background-image: url('../img/union.png')
         background-size: contain
         background-position: right top
         background-repeat: no-repeat
@@ -31,21 +31,24 @@
             right: -20rem
 
     &_content
-        display: flex
-        justify-content: space-around
-        flex-direction: column
+        display: block
+        position: relative
         height: 100%
-        width: 80%
+        width: 70%
         padding: 5rem
         
         +tablet
             width: 80%
+            padding: 2rem
         
         +mobile
             width: 100%
     
         &-top
             z-index: 5
+            position: absolute
+            top: 50%
+            transform: translateY(calc(-50% - 9rem))
                 
             &--text
                 color: $font_color--primary
@@ -54,6 +57,8 @@
             
         &-bottom
             z-index: 5
+            position: absolute
+            bottom: 12rem
             
             p
                 color: $font_color--primary
@@ -127,34 +132,81 @@
         display: block
     
 .case_item
-    width: 100%
-    min-width: 40rem
+    width: 33%
     height: 55rem
-    margin-right: $gutter-lr
+    margin-right: 0
     position: relative
     overflow: hidden
     display: inline-block
+    transition: .3s all cubic-bezier(0.68, -0.55, 0.265, 1.55)
+
+    &:hover > .case 
+        .case_heading-bottom
+            transform: translateY(-2.5rem)
+    
+    &:hover > .case 
+        .case_paragraph
+            visibility: visible
+            transform: translateY(0rem)
+            opacity: 1
 
     &:not(:last-child)
         margin-right: $gutter-lr
+
+    &:hover > .case_image
+        transform: scale(1.05) rotate(-2deg)
+        opacity: 1
+    
+    &:hover > .case_image:after
+        background-image: linear-gradient(to top left, rgba(0,0,0,.8), rgba(0,0,0,.1))
+    
+    &:nth-child(2)
+        +breakpoint_md
+            margin-right: 0
+            
+
+    +breakpoint_md
+        width: calc(50% - 3rem)
+        margin-bottom: 3rem
+
+    +hide_menu
+        width: calc(50% - 3rem)
+        margin-bottom: 3rem
+    
+    +tablet
+        width: 100%
+        margin-bottom: 3rem
+    
+    +mobile 
+        height: 40rem
 
 .case_image 
     width: 100%
     height: 100%
     background-position: 100%
     transition: ease all .3s
+    opacity: .8
 
-    &:hover
-        transform: scale(1.1)
-
-    &:hover.case_heading-top
-        transform: translateY(-1rem)
+    &:after
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        height: 100%
+        width: 100%
+        background-image: linear-gradient(to top left, rgba(0,0,0,.4), rgba(0,0,0,.1))
+        transition: .5s ease all
     
 .case_heading-top
     color: white
+    font-weight: normal
+    font-size: 1.6rem
     position: absolute
-    top: 4rem
+    top: -51rem
     left: 4rem
+
+    +mobile
+        top: -37rem
 
 .case_heading-bottom
     font-size: 2rem
@@ -162,18 +214,68 @@
     position: absolute
     bottom: 4rem
     left: 4rem
+    transition: .3s all cubic-bezier(0.68, -0.55, 0.265, 1.55)
 
 .case-text
 
 .case_paragraph
     position: absolute
     left: 4rem
-    bottom: 4rem
-    // visibility: hidden
-    transform: translateY(-1rem)
+    bottom: 3.7rem
+    visibility: hidden
+    transform: translateY(2rem)
     color: white
+    transition: .3s all cubic-bezier(0.68, -0.55, 0.265, 1.55)
+    opacity: 0
 
-    +tablet
+//INFO-SECTION
+
+$info_section--margin: 5rem
+
+.info_section
+    text-align: left
+    padding: 7rem 0 0 0
+    
+    +mobile 
+        padding: 0 0 0 0
+
+    &-wrapper
+        margin-top: 3rem
+        background-color: white
+        padding: $info_section--margin
+
+        +mobile 
+            margin-top: 0rem
+
+    &--heading
+        color: rgba(0,0,0, .75)
+        margin-top: $info_section--margin
+        margin-bottom: $info_section--margin / 2
+        font-size: 4rem
+
+        +mobile 
+            margin-top: 2rem
+    &--paragraph
+        color: rgba(0,0,0,.75)
+        font-size: 1.8rem
+        line-height: 200%
+
+        +mobile 
+            line-height: 150%
+    img 
+        margin: 5rem 4rem 12rem 0rem
+        transition: .3s ease all
+
+        +mobile 
+            margin: 2rem 4rem 2rem 0rem
+
+        &:not(:first-child)
+            margin: 5rem 4rem 12rem 2rem 
+
+        &:hover 
+            transform: translateY(-.5rem)
+
+
 
 
             

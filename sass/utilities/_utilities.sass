@@ -8,13 +8,13 @@
         padding: 1rem
 
 .u-padding-large
-    padding: 7rem
+    padding: 9rem 7rem
 
     +mobile
         padding: 3rem
 
 .u-padding-x-large
-    padding: 9rem
+    padding: 12rem
 
     +tablet 
         padding: 4rem
@@ -34,3 +34,20 @@
     max-width: 144rem
     margin: auto
     position: relative
+
+.u-container-min
+    max-width: 94rem
+    margin: auto
+    position: relative
+
+.u-highlight
+    position: relative
+    &:after
+        content: ''
+        position: absolute
+        width: 105%
+        height: 2rem
+        bottom: 10px
+        left: -3px
+        background-color: $red
+        opacity: .5

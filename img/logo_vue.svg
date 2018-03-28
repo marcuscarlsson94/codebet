@@ -1,0 +1,22 @@
+<svg width="57" height="49" viewBox="0 0 57 49" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>logo_vue</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-68 -1080)">
+<g id="logo_vue">
+<g id="Vector">
+<use xlink:href="#path0_fill" transform="translate(68 1080)" fill="#41B883"/>
+</g>
+<g id="Vector">
+<use xlink:href="#path1_fill" transform="translate(68 1080)" fill="#C9C9C9"/>
+</g>
+<g id="Vector">
+<use xlink:href="#path2_fill" transform="translate(79.2575 1080)" fill="#B2B2B2"/>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" d="M 45.6 0L 57 0L 28.5 49L 0 0L 21.8025 0L 28.5 11.3623L 35.055 0L 45.6 0Z"/>
+<path id="path1_fill" d="M 0 0L 28.5 49L 57 0L 45.6 0L 28.5 29.4L 11.2575 0L 0 0Z"/>
+<path id="path2_fill" d="M 3.05772e-07 0L 17.2425 29.542L 34.3425 0L 23.7975 0L 17.2425 11.3623L 10.545 0L 3.05772e-07 0Z"/>
+</defs>
+</svg>
