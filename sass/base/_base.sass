@@ -24,7 +24,11 @@ body
 
   a
     text-decoration: none
-    color: $orange
+    color: lighten($red, 15%)
+    transition: .15s ease all
+
+    &:hover 
+      color: $red
 
   h2 
     font-size: 4rem

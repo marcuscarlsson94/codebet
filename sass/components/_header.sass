@@ -71,10 +71,11 @@
 
 
 .hamburger 
-    display: inline-flex
-    align-items: center
     cursor: pointer
     z-index: 999
+    position: absolute
+    top: 4rem
+    right: 4rem
     
     p 
         margin-right: 10px
@@ -148,13 +149,13 @@
     padding: 2rem
     background-color: $red
     border-top: 1px solid black
-    z-index: 998
+    z-index: 6
     text-align: center
     transform: translateX(550rem)
     transition: cubic-bezier(0,.45,0,.93) .4s
 
     +tablet 
-        width: 80%
+        width: 100%
 
     &--item
         list-style: none

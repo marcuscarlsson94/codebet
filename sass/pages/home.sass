@@ -118,6 +118,11 @@
     position: relative
     background-color: #f5f6f7
     width: 100%
+    padding: 12rem 7rem 17rem 7rem
+
+    &-project
+        width: 100%
+        position: relative
 
 .case_item_wrapper
     width: 100%
@@ -140,11 +145,11 @@
     display: inline-block
     transition: .3s all cubic-bezier(0.68, -0.55, 0.265, 1.55)
 
-    &:hover > .case 
+    &:hover > .case-project 
         .case_heading-bottom
             transform: translateY(-2.5rem)
     
-    &:hover > .case 
+    &:hover > .case-project 
         .case_paragraph
             visibility: visible
             transform: translateY(0rem)
@@ -154,11 +159,11 @@
         margin-right: $gutter-lr
 
     &:hover > .case_image
-        transform: scale(1.05) rotate(-2deg)
+        transform: scale(1.05) rotate(0deg)
         opacity: 1
     
     &:hover > .case_image:after
-        background-image: linear-gradient(to top left, rgba(0,0,0,.8), rgba(0,0,0,.1))
+        background-image: linear-gradient(to top, rgba(0,0,0,.7), rgba($red, 0))
     
     &:nth-child(2)
         +breakpoint_md
@@ -186,6 +191,7 @@
     background-position: 100%
     transition: ease all .3s
     opacity: .8
+    backface-visibility: hidden
 
     &:after
         content: ''
@@ -195,7 +201,7 @@
         height: 100%
         width: 100%
         background-image: linear-gradient(to top left, rgba(0,0,0,.4), rgba(0,0,0,.1))
-        transition: .5s ease all
+        transition: .3s ease all
     
 .case_heading-top
     color: white
@@ -234,13 +240,12 @@ $info_section--margin: 5rem
 
 .info_section
     text-align: left
-    padding: 7rem 0
+    padding: 9rem 0
     
     +mobile 
         padding: 0 0 0 0
 
     &-wrapper
-        margin-top: 3rem
         background-color: white
         padding: $info_section--margin
 
@@ -249,14 +254,17 @@ $info_section--margin: 5rem
 
     &--heading
         color: rgba(0,0,0, .75)
-        margin-bottom: $info_section--margin / 2
-        font-size: 4rem
+        margin-bottom: $info_section--margin / 1.5
+        font-size: 5rem
+        font-weight: 900
+        line-height: 130%
 
         +mobile 
             margin-top: 2rem
+            
     &--paragraph
-        color: rgba(0,0,0,.75)
-        font-size: 1.8rem
+        color: rgba(0,0,0,.55)
+        font-size: 2rem
         line-height: 200%
 
         +mobile 
