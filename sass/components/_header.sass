@@ -1,6 +1,5 @@
 .header
     width: 100%
-    padding: 2.5rem 5rem
     position: relative
     background-color: transparent
     z-index: 100
@@ -12,6 +11,13 @@
        width: 23rem
        height: 4.5rem
        z-index: 1
+       position: absolute
+       top: 2.5rem
+       left: 5rem
+
+       +mobile
+            left: 2rem
+
         
     &_menu
 
@@ -177,7 +183,7 @@
     top: 0
     right: 0
     width: 52%
-    height: 100vh
+    height: 100%
     padding: 2rem
     background-color: rgba($red, .7) 
     border-top: 1px solid black
@@ -195,7 +201,7 @@
     top: 0
     right: 0
     width: 54%
-    height: 100vh
+    height: 100%
     padding: 2rem
     background-color: rgba($red, .5) 
     border-top: 1px solid black
