@@ -7,7 +7,7 @@
     <meta name="description" content="Webbsida för CodeBet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="/Users/marcuskarlsson/Code/code-personal/codebet/sass/vendors/ionicons-2.0.1/css/ionicons.min.css"
+    <link rel="stylesheet" href="/vendors/ionicons-2.0.1/css/ionicons.min.css"
     />
     <link rel="stylesheet" href="./animate.css" />
 </head>
@@ -77,7 +77,11 @@
         </div>
     </section>
 
-    <section class="case u-padding-large">
+<!--
+    //CASE
+-->
+
+    <section class="case">
 
         <h3 class="case-top-heading">Vi skapar fantastiska saker!</h3>
 
@@ -86,7 +90,7 @@
             <a href="#" class="case_item">
 
                 <div class="case_image u-bg-cover" style="background-image: url('img/bethard.jpg');"></div>
-                <div class="case">
+                <div class="case-project">
                     <h3 class="case_heading-top">Sportsbook, app, frontwebb</h3>
                     <h3 class="case_heading-bottom">Bethard</h3>
                     <p class="case_paragraph">Läs mer</p>
@@ -98,7 +102,7 @@
 
                 <div class="case_image u-bg-cover" style="background-image: url('img/sport.jpg');">
                 </div>
-                <div class="case">
+                <div class="case-project">
                     <h3 class="case_heading-top">Bethard</h3>
                     <h3 class="case_heading-bottom">Sport.se</h3>
                     <p class="case_paragraph">Läs mer</p>
@@ -109,7 +113,7 @@
             <a href="#" class="case_item">
 
                 <div class="case_image u-bg-cover" style="background-image: url('img/Rectangle 2.4.png');"></div>
-                <div class="case">
+                <div class="case-project">
                     <h3 class="case_heading-top">Frontend</h3>
                     <h3 class="case_heading-bottom">24sverige.se</h3>
                     <p class="case_paragraph">Läs mer</p>
@@ -117,36 +121,44 @@
             </a>
 
         </div>
-        <div class="info_section-wrapper">
-            <div class="info_section u-container-min">
-                <h3 class="info_section--heading">En vision. Världens
-                    <span class="u-highlight">bästa</span> arbetsplats!</h3>
-                <div class="info_section--paragraph">Codebet är en digital kommunikationsbyrå från Kalmar Småland. Vi är idag 9 st digitalt drivna utvecklare
-                    och kundansvariga som engagerar sig i våra kunders verksamhet och behov. Codebet är en digital kommunikationsbyrå
-                    från Kalmar Småland. Vi är idag 9 st digitalt drivna utvecklare och kundansvariga som engagerar sig i
-                    våra kunders verksamhet och behov.</div>
-                <div class="info_section--logos">
-                    <a href="#">
-                        <img src="img/logo_apple.svg">
-                    </a>
-                    <a href="#">
-                        <img src="img/logo_github.svg">
-                    </a>
-                    <a href="#">
-                        <img src="img/logo_vue.svg">
-                    </a>
-                    <a href="#">
-                        <img src="img/logo_slack.png">
-                    </a>
-                    <a href="#">
-                        <img src="img/logo_laravel.svg">
-                    </a>
-                    <a href="#">
-                        <img src="img/reactsjs.svg">
-                    </a>
-                </div>
+
+    </section>
+
+    <div class="info_section-wrapper">
+        <div class="info_section u-container-min">
+            <h3 class="info_section--heading">Vi jobbar tillsammans mot visionen. Världens
+                <span class="u-highlight">bästa</span> arbetsplats!</h3>
+            <div class="info_section--paragraph">Codebet är en digital kommunikationsbyrå från Kalmar Småland. Vi är idag 9 st digitalt drivna utvecklare och kundansvariga
+                som engagerar sig i våra kunders verksamhet och behov. Codebet är en digital kommunikationsbyrå från Kalmar Småland.
+                Vi är idag 9 st digitalt drivna utvecklare och kundansvariga som engagerar sig i våra kunders verksamhet och
+                behov.</div>
+            <div class="info_section--logos">
+                <a href="#">
+                    <img src="img/logo_apple.svg">
+                </a>
+                <a href="#">
+                    <img src="img/logo_github.svg">
+                </a>
+                <a href="#">
+                    <img src="img/logo_vue.svg">
+                </a>
+                <a href="#">
+                    <img src="img/logo_slack.png">
+                </a>
+                <a href="#">
+                    <img src="img/logo_laravel.svg">
+                </a>
+                <a href="#">
+                    <img src="img/reactsjs.svg">
+                </a>
             </div>
         </div>
+    </div>
+
+
+<!--
+    //VIDEO
+-->
 
     <div id="video_container" class="u-container">
         <video id="video" muted>
@@ -157,6 +169,7 @@
         <p id="video_paragraph">Läs mer här!</p>
         <button onclick="play()" type="button" id="playBtn">Play</button>
     </div>
+
 
     <div class="info_section-wrapper">
         <div class="info_section u-container-min">
@@ -170,7 +183,32 @@
         </div>
     </div>
 
-</section>
+    <section class="footer">
+        <div class="footer-col-1-4">
+            <p>Adress</p>
+            <p>Ölandsgatan 30</p>
+            <p>392 30 Kalmar</p>
+        </div>
+        <div class="footer-col-1-4">
+            <p>Kontakt</p>
+            <p><a href="#">info@codebet.se</a></p>
+            <p><a href="#">join@codebet.se</a></p>
+        </div>
+        <div class="footer-col-1-4">
+            <p>&nbsp;</p>
+            <p>073-123 45 67</p>
+            <p>073-124 54 76</p>
+        </div>
+        <div class="footer-col-1-4">
+            <p>Sociala medier</p>
+            <i class="icon ion-social-facebook"></i>
+            <i class="icon ion-social-instagram-outline"></i>
+            <i class="icon ion-social-github"></i>
+        </div>
+    </section>
+
+
+
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/playbutton.js"></script>
