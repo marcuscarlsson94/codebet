@@ -21,17 +21,8 @@
         
     &_menu
 
-        +hide_menu
-            display: none
-
-        +tablet
-            display: none
-        
-        +mobile
-            display: none
-
         &_list
-            display: inline-flex
+            display: inline-block
             font-size: 1.7rem
 
         &_list--item
@@ -177,6 +168,7 @@
 .mobile_menu--active
     right: 0
     transform: translateX(0)
+    display: inline-flex
 
 .bg--animation
     position: absolute

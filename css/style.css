@@ -113,17 +113,8 @@ body {
     @media only screen and (max-width: 420px) {
       .header_logo {
         left: 2rem; } }
-  @media only screen and (max-width: 991px) {
-    .header_menu {
-      display: none; } }
-  @media only screen and (max-width: 768px) {
-    .header_menu {
-      display: none; } }
-  @media only screen and (max-width: 420px) {
-    .header_menu {
-      display: none; } }
   .header_menu_list {
-    display: inline-flex;
+    display: inline-block;
     font-size: 1.7rem; }
   .header_menu_list--item {
     position: relative;
@@ -255,7 +246,8 @@ body {
 
 .mobile_menu--active {
   right: 0;
-  transform: translateX(0); }
+  transform: translateX(0);
+  display: inline-flex; }
 
 .bg--animation {
   position: absolute;
