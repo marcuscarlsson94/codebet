@@ -6,41 +6,47 @@
 @include google-font("Caveat")
 
 // == MEDIA QUERIES
+    
 @mixin mobile() 
-   @media only screen and (max-width: 420px)
-    @content
+    @media only screen and (max-width: 420px)
+        @content
   
 
 @mixin tablet() 
-   @media only screen and (max-width: 768px)
-    @content
+    @media only screen and (max-width: 768px)
+        @content
 
 @mixin hide_menu() 
-   @media only screen and (max-width: 991px)
-    @content
+    @media only screen and (max-width: 991px)
+        @content
+
+
+@mixin desktop-small-mw() 
+    @media only screen and (max-width: 998px)
+        @content
 
 @mixin desktop-small() 
-   @media only screen and (min-width: 768px)
-    @content
-  
+    @media only screen and (min-width: 998px)
+        @content
 
+    
 @mixin desktop-medium() 
-   @media only screen and (min-width: 1440px)
-    @content
+    @media only screen and (min-width: 1440px)
+        @content
 
 
 @mixin desktop-large() 
-   @media only screen and (min-width: 1440px)
-    @content
+    @media only screen and (min-width: 1440px)
+        @content
 
 
 @mixin breakpoint_md() 
-   @media only screen and (max-width: 1140px)
-    @content
+    @media only screen and (max-width: 1140px)
+        @content
 
 @mixin hide_mobile_menu() 
-   @media only screen and (min-width: 768px)
-    @content
+    @media only screen and (min-width: 768px)
+        @content
   
 
 

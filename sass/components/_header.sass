@@ -5,6 +5,9 @@
     z-index: 100
     padding: 2.5rem 5rem
 
+    +tablet
+        padding: 2.5rem 2rem
+
     &_logo
        background-image: url('../img/codebet_org_cmyk.svg')
        background-repeat: no-repeat
@@ -170,7 +173,7 @@
         justify-content: center
 
         &:hover, &:active
-            background-color: darken($red, 10%)
+            background-color: darken($red, 5%)
             color: white
 
 .mobile_menu--active
