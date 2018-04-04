@@ -3,19 +3,45 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>CodeBet - Digital byrå som bygger webbsidor och appar för framtiden!</title>
-    <meta name="description" content="Webbsida för CodeBet">
+    <title>CodeBet - Digital digital utvecklingsbyrå!</title>
+    <meta name="description" content="Codebet AB - digital utvecklingsbyrå!">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="/Users/marcuskarlsson/Code/code-personal/codebet/sass/vendors/ionicons-2.0.1/css/ionicons.min.css"
+    <link rel="stylesheet" href="sass/vendors/ionicons-2.0.1/css/ionicons.min.css"
     />
     <link rel="stylesheet" href="./animate.css" />
 </head>
 
-<body class="u-container">
+<body>
 
-    <section>
-        <div class="hero">
+    <!--MOBILE MENU-->
+    
+    <div class="header_menu">
+        <div class="bg--animation"></div>
+        <div class="bg--animation-1"></div>
+        <div class="mobile_menu f-c-c">
+            <ul>
+                <a href="/Users/marcuskarlsson/Code/code-personal/jonathanrudman/index.html" class="mobile_menu--item">
+                    <li>HEM</li>
+                </a>
+                <a href="/Users/marcuskarlsson/Code/code-personal/jonathanrudman/about.html" class="mobile_menu--item">
+                    <li>OM MIG</li>
+                </a>
+                <a class="mobile_menu--item">
+                    <li>TJÄNSTER</li>
+                </a>
+                <a href="/Users/marcuskarlsson/Code/code-personal/jonathanrudman/contact.html" class="mobile_menu--item">
+                    <li>KONTAKT</li>
+                </a>
+            </ul>
+        </div>
+    </div>
+    
+    <!--MOBILE MENU END-->
+
+    <section id="hero">
+
+        <div class="hero u-container">
 
             <div class="header f f-b f-c-b">
                 <a href="/Users/marcuskarlsson/Code/code-personal/jonathanrudman/index.html" class="header_logo"></a>
@@ -32,40 +58,12 @@
 
             </div>
 
-            <!--MOBILE MENU-->
-
-            <div class="bg--animation"></div>
-            <div class="bg--animation-1"></div>
-            <div class="mobile_menu f-c-c">
-                <div class="close_hamburger">
-                    <div>
-                        <div class="change bread1"></div>
-                        <div class="change bread2"></div>
-                    </div>
-                </div>
-                <ul>
-                    <a href="/Users/marcuskarlsson/Code/code-personal/jonathanrudman/index.html" class="mobile_menu--item">
-                        <li>HEM</li>
-                    </a>
-                    <a href="/Users/marcuskarlsson/Code/code-personal/jonathanrudman/about.html" class="mobile_menu--item">
-                        <li>OM MIG</li>
-                    </a>
-                    <a class="mobile_menu--item">
-                        <li>TJÄNSTER</li>
-                    </a>
-                    <a href="/Users/marcuskarlsson/Code/code-personal/jonathanrudman/contact.html" class="mobile_menu--item">
-                        <li>KONTAKT</li>
-                    </a>
-                </ul>
-            </div>
-
-            <!--MOBILE MENU END-->
-
             <div class="hero_content">
                 <div class="hero_content-top">
                     <p class="hero_font--small">Codebet</p>
                     <h3 class="hero_font--large">Vi bygger framtidens webblösningar.
                         <br/>Och har kul på vägen.</h3>
+                        <a href="#" class="btn_primary">Läs mer </a>
                 </div>
                 <!-- <div class="hero_content-bottom">
                     <p>CodeBet är en digital byrå ifrån Kalmar Småland som producerar resultatdrivande kommunikation. Är ni
@@ -77,7 +75,11 @@
         </div>
     </section>
 
-    <section class="case u-padding-large">
+<!--
+    //CASE
+-->
+
+    <section class="case u-container">
 
         <h3 class="case-top-heading">Vi skapar fantastiska saker!</h3>
 
@@ -86,10 +88,20 @@
             <a href="#" class="case_item">
 
                 <div class="case_image u-bg-cover" style="background-image: url('img/bethard.jpg');"></div>
-                <div class="case">
+                <div class="case-project">
                     <h3 class="case_heading-top">Sportsbook, app, frontwebb</h3>
                     <h3 class="case_heading-bottom">Bethard</h3>
-                    <p class="case_paragraph">Läs mer</p>
+                    <p class="case_paragraph">Läs mer <svg width="22" height="8" viewBox="0 0 22 8" version="1.1" class="arrow-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g id="Canvas" transform="translate(-1152 -924)">
+                            <g id="Arrow 2.2">
+                                <use xlink:href="#path0_stroke" transform="translate(1152 928)" fill="#FFFFFF" />
+                            </g>
+                        </g>
+                        <defs>
+                            <path id="path0_stroke" d="M 21.3536 0.353553C 21.5488 0.158291 21.5488 -0.158291 21.3536 -0.353553L 18.1716 -3.53553C 17.9763 -3.7308 17.6597 -3.7308 17.4645 -3.53553C 17.2692 -3.34027 17.2692 -3.02369 17.4645 -2.82843L 20.2929 0L 17.4645 2.82843C 17.2692 3.02369 17.2692 3.34027 17.4645 3.53553C 17.6597 3.7308 17.9763 3.7308 18.1716 3.53553L 21.3536 0.353553ZM 0 0.5L 21 0.5L 21 -0.5L 0 -0.5L 0 0.5Z"
+                            />
+                        </defs>
+                    </svg></p>
                 </div>
 
             </a>
@@ -98,10 +110,20 @@
 
                 <div class="case_image u-bg-cover" style="background-image: url('img/sport.jpg');">
                 </div>
-                <div class="case">
+                <div class="case-project">
                     <h3 class="case_heading-top">Bethard</h3>
                     <h3 class="case_heading-bottom">Sport.se</h3>
-                    <p class="case_paragraph">Läs mer</p>
+                    <p class="case_paragraph">Läs mer <svg width="22" height="8" viewBox="0 0 22 8" version="1.1" class="arrow-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g id="Canvas" transform="translate(-1152 -924)">
+                            <g id="Arrow 2.2">
+                                <use xlink:href="#path0_stroke" transform="translate(1152 928)" fill="#FFFFFF" />
+                            </g>
+                        </g>
+                        <defs>
+                            <path id="path0_stroke" d="M 21.3536 0.353553C 21.5488 0.158291 21.5488 -0.158291 21.3536 -0.353553L 18.1716 -3.53553C 17.9763 -3.7308 17.6597 -3.7308 17.4645 -3.53553C 17.2692 -3.34027 17.2692 -3.02369 17.4645 -2.82843L 20.2929 0L 17.4645 2.82843C 17.2692 3.02369 17.2692 3.34027 17.4645 3.53553C 17.6597 3.7308 17.9763 3.7308 18.1716 3.53553L 21.3536 0.353553ZM 0 0.5L 21 0.5L 21 -0.5L 0 -0.5L 0 0.5Z"
+                            />
+                        </defs>
+                    </svg></p>
                 </div>
 
             </a>
@@ -109,68 +131,86 @@
             <a href="#" class="case_item">
 
                 <div class="case_image u-bg-cover" style="background-image: url('img/Rectangle 2.4.png');"></div>
-                <div class="case">
+                <div class="case-project">
                     <h3 class="case_heading-top">Frontend</h3>
                     <h3 class="case_heading-bottom">24sverige.se</h3>
-                    <p class="case_paragraph">Läs mer</p>
+                    <p class="case_paragraph">Läs mer <svg width="22" height="8" viewBox="0 0 22 8" version="1.1" class="arrow-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g id="Canvas" transform="translate(-1152 -924)">
+                            <g id="Arrow 2.2">
+                                <use xlink:href="#path0_stroke" transform="translate(1152 928)" fill="#FFFFFF" />
+                            </g>
+                        </g>
+                        <defs>
+                            <path id="path0_stroke" d="M 21.3536 0.353553C 21.5488 0.158291 21.5488 -0.158291 21.3536 -0.353553L 18.1716 -3.53553C 17.9763 -3.7308 17.6597 -3.7308 17.4645 -3.53553C 17.2692 -3.34027 17.2692 -3.02369 17.4645 -2.82843L 20.2929 0L 17.4645 2.82843C 17.2692 3.02369 17.2692 3.34027 17.4645 3.53553C 17.6597 3.7308 17.9763 3.7308 18.1716 3.53553L 21.3536 0.353553ZM 0 0.5L 21 0.5L 21 -0.5L 0 -0.5L 0 0.5Z"
+                            />
+                        </defs>
+                    </svg></p>
                 </div>
             </a>
 
         </div>
-        <div class="info_section-wrapper">
-            <div class="info_section u-container-min">
-                <h3 class="info_section--heading">En vision. Världens
-                    <span class="u-highlight">bästa</span> arbetsplats!</h3>
-                <div class="info_section--paragraph">Codebet är en digital kommunikationsbyrå från Kalmar Småland. Vi är idag 9 st digitalt drivna utvecklare
-                    och kundansvariga som engagerar sig i våra kunders verksamhet och behov. Codebet är en digital kommunikationsbyrå
-                    från Kalmar Småland. Vi är idag 9 st digitalt drivna utvecklare och kundansvariga som engagerar sig i
-                    våra kunders verksamhet och behov.</div>
-                <div class="info_section--logos">
-                    <a href="#">
-                        <img src="img/logo_apple.svg">
-                    </a>
-                    <a href="#">
-                        <img src="img/logo_github.svg">
-                    </a>
-                    <a href="#">
-                        <img src="img/logo_vue.svg">
-                    </a>
-                    <a href="#">
-                        <img src="img/logo_slack.png">
-                    </a>
-                    <a href="#">
-                        <img src="img/logo_laravel.svg">
-                    </a>
-                    <a href="#">
-                        <img src="img/reactsjs.svg">
-                    </a>
+
+    </section>
+
+    <section class="info_section-wrapper">
+        <div class="info_section u-container-min">
+            <h3 class="info_section--heading">Vi jobbar tillsammans mot visionen. Världens
+                <span class="u-highlight">bästa</span> arbetsplats!</h3>
+            <div class="info_section--paragraph">Codebet är en digital kommunikationsbyrå från Kalmar Småland. Vi är idag 9 st digitalt drivna utvecklare och kundansvariga
+                som engagerar sig i våra kunders verksamhet och behov. Codebet är en digital kommunikationsbyrå från Kalmar Småland.
+                Vi är idag 9 st digitalt drivna utvecklare och kundansvariga som engagerar sig i våra kunders verksamhet och
+                behov.</div>
+            <div class="info_section--logos">
+                <a href="#">
+                    <img src="img/logo_apple.svg">
+                </a>
+                <a href="#">
+                    <img src="img/logo_github.svg">
+                </a>
+                <a href="#">
+                    <img src="img/logo_vue.svg">
+                </a>
+                <a href="#">
+                    <img src="img/logo_slack.svg">
+                </a>
+                <a href="#">
+                    <img src="img/logo_laravel.svg">
+                </a>
+                <a href="#">
+                    <img src="img/logo_react.svg">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer_wrapper">
+        <div class="u-container footer_container">
+            <div class="footer-col-2-3">
+                <p>Om oss</p>
+                <p>Codebet är en digital utvecklingsbyrå som jobbar med kundspecifika lösningar inom webb- och nativeapplikationer.</p>
+                <div class="icons">
+                    <a href="#"><i class="icon ion-social-facebook"></i></a>
+                    <a href="#"><i class="icon ion-social-instagram-outline"></i></a>
+                    <a href="#"><i class="icon ion-social-github"></i></a>
                 </div>
             </div>
-        </div>
-
-    <div id="video_container" class="u-container">
-        <video id="video" muted>
-            <source src="img/video.mp4" type="video/mp4">
-            <source src="img/video.webm" type="video/webm"> Din webbläsare har inte support för den här filmen. Vänligen uppdatera din webbläsare.
-        </video>
-        <h3 id="video_heading">Vi gillar kod. Vi gillar dig</h3>
-        <p id="video_paragraph">Läs mer här!</p>
-        <button onclick="play()" type="button" id="playBtn">Play</button>
-    </div>
-
-    <div class="info_section-wrapper">
-        <div class="info_section u-container-min">
-            <h3 class="info_section--heading">En vision. Världens
-                <span class="u-highlight">bästa</span> arbetsplats!</h3>
-            <div class="info_section--paragraph">Codebet är en digital kommunikationsbyrå från Kalmar Småland. Vi är idag 9 st digitalt drivna utvecklare och
-            kundansvariga som engagerar sig i våra kunders verksamhet och behov. Codebet är en digital kommunikationsbyrå
-            från Kalmar Småland. Vi är idag 9 st digitalt drivna utvecklare och kundansvariga som engagerar sig i våra
-            kunders verksamhet och behov.
+            <div class="footer-col-1-3">
+                <p>Adress</p>
+                <p>Ölandsgatan 30</p>
+                <p>392 30 Kalmar</p>
+                <p>Sweden</p>
+                <p>Sweden</p>
+            </div>
+            <div class="footer-col-1-3">
+                <p>Kontakt</p>
+                <p><a href="#">073-123 45 67</a></p>
+                <p><a href="#">join@codebet.se</a></p>
             </div>
         </div>
-    </div>
+    </section>
 
-</section>
+
+
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/playbutton.js"></script>

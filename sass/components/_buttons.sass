@@ -1,8 +1,8 @@
 .btn_primary
     padding: 1.5rem 6rem
-    background-color: none
-    border: 2px solid $orange 
-    border-radius: 1rem
+    background-color: $red
+    background-image: linear-gradient(to right, rgba($red, 1), rgba($red,.9)) 
+    border-radius: 50rem
     margin: 3rem 0
     display: inline-block
     position: relative
@@ -13,11 +13,12 @@
     transition: .3s ease all
 
     +tablet
-        margin: 1rem 0
+        margin: 3rem 0
 
     &:hover 
         transform: translateY(-5px)
-        background-color: $orange
+        background-color: darken($red, 40%)
+        color: white
    
 
 .btn_secondary
