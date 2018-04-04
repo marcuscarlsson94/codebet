@@ -3,6 +3,7 @@
     position: relative
     background-color: transparent
     z-index: 100
+    padding: 2.5rem 5rem
 
     &_logo
        background-image: url('../img/codebet_org_cmyk.svg')
@@ -11,51 +12,53 @@
        width: 23rem
        height: 4.5rem
        z-index: 1
-       position: absolute
-       top: 2.5rem
-       left: 5rem
-
-       +mobile
-            left: 2rem
-
+       position: relative
         
     &_menu
 
-        &_list
-            display: inline-block
+        &-list
+            display: inline-flex
             font-size: 1.7rem
+            
+            +tablet
+                display: none
 
-        &_list--item
+        &-list--item
             position: relative
             list-style: none
             text-decoration: none
             color: $dark-grey
             transition: .3s ease all
 
+            &:not(:last-of-type)
+                margin-right: 6rem
+
             &:hover
-                color: rgba(0,0,0,.5)
+                color: $red
 
             &::after
               content: ""
               position: absolute
-              bottom: -4.2rem
+              bottom: -1rem
               left: 0
               width: 100%
               height: 3px
-              background-color: $orange
+              background-color: $red
               transform-origin: center
               transition: ease all .2s
               transform: scale(0)
 
-            &.active  
+            &.active
+                color: $red
+
                 &::after
                     content: ""
                     position: absolute
-                    bottom: -4.2rem
+                    bottom: -1rem
                     left: 0
                     width: 100%
                     height: 3px
-                    background-color: $orange
+                    background-color: $red
                     transform-origin: center
                     transition: ease all .2s
                     transform: scale(1)
@@ -63,7 +66,7 @@
             &:hover:after
                 transform: scale(1)
 
-        &_list--item:not(:last-of-type)
+        &-list--item:not(:last-of-type)
             margin-right: 5rem
 
 
@@ -77,6 +80,9 @@
     p 
         margin-right: 10px
         color: $dark-grey
+
+    +hide_mobile_menu
+        display: none
 
 .hamburger:hover .bar2
     transform: translateX(5px)
@@ -137,73 +143,40 @@
 
 .mobile_menu
     position: absolute
-    display: flex
     flex-direction: column
     top: 0
     right: 0
-    width: 50%
+    width: 100%
     height: 100%
     padding: 2rem
     background-color: $red
-    border-top: 1px solid black
-    z-index: 6
+    z-index: 0
     text-align: center
-    transform: translateX(550rem)
-    transition: cubic-bezier(0,.45,0,.93) .4s
+    transition: cubic-bezier(0,.45,0,.93) .3s
+    opacity: 0
 
-    +tablet 
-        width: 100%
+    +hide_mobile_menu
+        display: none
 
     &--item
         list-style: none
-        display: block
+        display: inline-flex
         padding: 3rem 2rem
         color: white
+        width: 100%
+        padding: 4rem 0
         cursor: pointer
-        transition: .3s ease all
+        align-items: center
+        justify-content: center
 
-        &:hover
-            color: rgba(255,255,255,.7)
+        &:hover, &:active
+            background-color: darken($red, 10%)
+            color: white
 
 .mobile_menu--active
-    right: 0
-    transform: translateX(0)
     display: inline-flex
+    opacity: 1
+    z-index: 6
 
-.bg--animation
-    position: absolute
-    top: 0
-    right: 0
-    width: 52%
-    height: 100%
-    padding: 2rem
-    background-color: rgba($red, .7) 
-    border-top: 1px solid black
-    z-index: 5
-    text-align: center
-    transform: translateX(550rem)
-    transition: cubic-bezier(0,.69,.23,1.01) .55s
-
-    &-in
-        transform: translateX(0)
-        right: 0
-
-.bg--animation-1
-    position: absolute
-    top: 0
-    right: 0
-    width: 54%
-    height: 100%
-    padding: 2rem
-    background-color: rgba($red, .5) 
-    border-top: 1px solid black
-    z-index: 5
-    text-align: center
-    transform: translateX(550rem)
-    transition: cubic-bezier(0,.69,0,1.02) .65s
-
-    &-in
-        transform: translateX(0)
-        right: 0
 
 

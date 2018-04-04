@@ -37,6 +37,10 @@
 @mixin breakpoint_md() 
    @media only screen and (max-width: 1140px)
     @content
+
+@mixin hide_mobile_menu() 
+   @media only screen and (min-width: 768px)
+    @content
   
 
 
